@@ -1,0 +1,42 @@
+#
+#       File:           README
+#       Description:    For describing non-trivial information about compiling and running
+#       Authors:        Scott Connell && Joel Rausch
+#       Date Created:	May 6, 2013 at 00:20
+#
+#       This file written for Programming Assignment 3 for CprE 426.
+#       Iowa State University
+#
+
+#########################
+#	COMPILING	#
+#########################
+
+	make
+
+
+#########################
+#	RUNNING		#
+#########################
+
+$OPTION1:
+	# In the Makefile, we have some variables for running.
+	# Defaults are
+	#	NP=8
+	#	IFILE=input.txt
+	#	OFILE=output.txt
+	# You can either go in and change these values in the actual Makefile, or see next option.
+	make run
+
+$OPTION2:
+	# To change these values to something else (e.g. 16 procs, input2.txt, output2.txt)
+	# You can change any number of these values at a time.
+	make NP=16 IFILE=input2.txt OFILE=output2.txt run 
+
+
+#########################
+#	SERIAL		#
+#########################
+
+	make		#make will make both the parallel and the serial versions
+	./serial <input_file> <output_file>	#it's serial, so just run it normally
